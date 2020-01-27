@@ -8,7 +8,6 @@ const isLoginValid = function(login) {
 };
 
 const isLoginUnique = function(allLogins, login) {
-  allLogins = logins;
   if (allLogins.includes(login)) {
     return false;
   }
@@ -16,11 +15,11 @@ const isLoginUnique = function(allLogins, login) {
 };
 
 const addLogin = function(allLogins, login) {
-  if (isLoginValid(login) === false) {
+  if (!isLoginValid(login)) {
     return 'Ошибка! Логин должен быть от 4 до 16 символов';
   }
 
-  if (isLoginValid(login) && isLoginUnique(allLogins, login) === false) {
+  if (isLoginValid(login) && !isLoginUnique(allLogins, login)) {
     return 'Такой логин уже используется!';
   }
 
