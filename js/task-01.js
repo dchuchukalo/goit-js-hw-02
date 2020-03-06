@@ -10,10 +10,14 @@
 то на место indexOf подставлялся индекс значения который был ближе к началу.
 переписал на код который ниже. Такой ошибки уже нет.   */
 
-const logItems = function(array) {
-  for (let i = 0; i < array.length; i += 1) {
-    console.log(`${i + 1} - ${array[i]}`);
-  }
+// const logItems = function(array) {
+//   for (let i = 0; i < array.length; i += 1) {
+//     console.log(`${i + 1} - ${array[i]}`);
+//   }
+// };
+
+const logItems = array => {
+  array.forEach(element => console.log(element));
 };
 
 logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 15, '12', 'asdad', -10]);
